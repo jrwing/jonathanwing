@@ -1,0 +1,298 @@
+.site-footer {
+  border: 5px solid red;
+}
+
+p::after {
+  content: " ✅ main.css loaded!";
+  color: red;
+  display: block;
+  font-size: 1rem;
+}
+
+.fade { opacity: 1; }
+
+a:hover {
+    text-decoration: none;
+}
+
+/*
+#content-holder .semplice-cover { display: none !important; } 
+
+.back-to-top {display: none !important;} 
+
+*/
+
+/* .ce-code { padding-top: 100px; } */
+
+.video-container { padding-top: 100px !important; }
+
+ul, li
+{
+padding:0px; margin: 0px;
+}
+
+/* START FOOTER */
+
+.site-footer {
+  width: 100%;
+  padding: 4rem 1rem;
+  background-color: #f4e6c2; /* light sandy yellow */
+  color: #000;
+  text-align: center;
+  font-family: 'aktiv-grotesk', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-social {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.social-icons {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-text {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-right: 1.5rem;
+}
+
+.footer-text:hover {
+  text-decoration: underline;
+}
+
+.no-circled {
+  color: #000;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.no-circled:hover {
+  color: #333;
+}
+
+/* Responsive: stack email on top */
+@media (max-width: 600px) {
+  .footer-text {
+    display: block;
+    margin-bottom: 1.5rem;
+    margin-right: 0;
+  }
+}
+
+/* END FOOTER */
+
+
+/* underline animation */
+.underline-links a {position: relative; display: inline-block;}
+
+.underline-links a::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #000;
+    height: 1px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.underline-links a:hover:before {right: 0 !important;}
+
+/* cursors */
+
+body {
+  cursor: url('http://jonathanwing.com/img/pizzapointer2.png'), default;
+}
+
+a:hover {
+cursor: url('http://jonathanwing.com/img/hearteyesemoji2.png'), default;
+}
+
+.semplice-navbar a:hover {
+cursor: pointer;  
+}
+
+
+
+/* VIEW MORE WORK TITLE BAR */
+.bordered-title {
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 1.5rem 0;
+}
+.bordered-title:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  border-top: 1px solid #fff;
+  margin-top: -1px;
+}
+.bordered-title a,
+.bordered-title span {
+  padding: 0 1rem;
+  position: relative;
+  background: #000;
+}
+
+.name-title {
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 1.2rem 0 0 0;
+}
+
+.text-title {
+  font-family: "aktiv-grotesk", sans-serif;
+  text-transform: uppercase;
+  color: rgb(255, 211, 0);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+.text-title + h2 {
+  color: rgb(255, 211, 0);
+  margin-top: 0;
+}
+.scroll-to {
+  text-transform: none;
+  font-size: 0.775rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  font-family: futura-pt;
+}
+
+a.scroll-to:link {
+  text-decoration: none;
+  color: #cccccc;
+}
+a.scroll-to:visited {
+  text-decoration: none;
+}
+a.scroll-to:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+a.scroll-to:active {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+
+/* END VIEW MORE WORK *
+
+
+
+/* CREDITS ABOVE VIDEOS */
+/* Flex rows */
+.credits-line1,
+.credits-line2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Adjusted vertical spacing */
+.credits-line1 {
+  margin-bottom: 1rem; /* reduced space between lines */
+}
+
+.credits-line2 {
+  margin-bottom: 0.25rem; /* space below credits block */
+}
+
+/* Shared <p> container styles */
+.credits-line1 p,
+.credits-line2 p {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base <span> text styles */
+span.projecttitle,
+span.role,
+span.director,
+span.prodco {
+  line-height: 1.2;
+  font-style: normal;
+  letter-spacing: 0.122rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Left-aligned spans */
+span.projecttitle,
+span.role {
+  text-align: left;
+}
+
+/* Right-aligned spans */
+span.director,
+span.prodco {
+  text-align: right;
+  text-transform: none;
+}
+
+/* Font sizes & colors */
+span.projecttitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+span.role {
+  font-size: 0.778rem;
+  color: rgb(163, 163, 163);
+}
+
+span.director {
+  font-size: 0.778rem; /* updated to match .role */
+  color: #999;
+}
+
+span.prodco {
+  font-size: 0.778rem; /* updated to match .role */
+  color: #999;
+}
+
+
+
+
+
+/* mobile fixes for credits */
+@media only screen and (max-width: 768px) {
+  span.projecttitle { 
+	  letter-spacing: normal; 
+	  font-size: 0.7rem !important;
+	}
+  span.role { 
+	  letter-spacing: normal; 
+	  font-size: 0.5rem !important;
+	}
+  span.prodco, span.director { display: none; }
+}
